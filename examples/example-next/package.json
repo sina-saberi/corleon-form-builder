@@ -1,0 +1,29 @@
+{
+  "name": "example-next",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@types/node": "20.2.5",
+    "@types/react": "18.2.9",
+    "@types/react-dom": "18.2.4",
+    "eslint": "8.42.0",
+    "eslint-config-next": "13.4.4",
+    "corleon-form-builder": "../../packages/corleon-form-builder",
+    "next": "13.4.4",
+    "react": "../../packages/corleon-form-builder/node_modules/react",
+    "react-dom": "../../packages/corleon-form-builder/node_modules/react-dom",
+    "split-pane-react": "^0.1.3",
+    "typescript": "5.1.3"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.14",
+    "postcss": "^8.4.24",
+    "tailwindcss": "^3.3.2"
+  }
+}

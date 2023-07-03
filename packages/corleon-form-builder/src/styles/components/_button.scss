@@ -1,0 +1,76 @@
+.corleon-button {
+    font-weight: bold;
+    border: 1px solid #ddd;
+    transition: all 4ms ease-in-out;
+    display: flex;
+    white-space: nowrap;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0.375rem;
+    height: min-content;
+
+    &:hover {
+        --tw-shadow: inset 0 2px 4px 0 rgb(0 0 0 / 0.05);
+        --tw-shadow-colored: inset 0 2px 4px 0 var(--tw-shadow-color);
+        box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+    }
+
+    &.success {
+        background-color: rgb(34 197 94);
+        color: white;
+
+        &:hover {
+            background-color: rgb(22 163 74);
+        }
+    }
+
+    &.danger {
+        background-color: #f87171;
+        color: white;
+
+        &:hover {
+            background-color: #f45555;
+        }
+    }
+
+    &.info {
+        background-color: #0ea5e9;
+        color: white;
+
+        &:hover {
+            background-color: #0f84ba;
+        }
+    }
+
+    &:disabled {
+        opacity: 0.60;
+    }
+
+    &.sm {
+        padding: 0 0.25rem;
+        font-size: 0.75rem;
+    }
+
+    &.md {
+        padding: 0.25rem 0.5rem;
+        font-size: 0.875rem;
+    }
+
+    &.lg {
+        padding: 0.5rem 1rem;
+        font-size: 0.875rem;
+    }
+
+    >span {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: inherit;
+
+        >svg {
+            position: absolute;
+            right: -15px;
+        }
+    }
+}

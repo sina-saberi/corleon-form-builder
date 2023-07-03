@@ -1,0 +1,30 @@
+.corleon-spinner {
+    @keyframes spin {
+        to {
+            transform: rotate(360deg);
+        }
+    }
+
+    animation: spin 1s linear infinite;
+    color: white;
+
+    >circle {
+        opacity: 0.25;
+    }
+
+    >path {
+        opacity: 0.75;
+    }
+
+    &-xs {
+        height: 0.75rem;
+    }
+
+    &-sm {
+        height: 0.875rem;
+    }
+
+    &-5xl {
+        height: 3rem;
+    }
+}

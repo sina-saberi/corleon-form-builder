@@ -1,0 +1,46 @@
+.corleon-field {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    >label {
+        font-weight: 700;
+        font-size: 0.75rem;
+        line-height: 1rem;
+        padding: 0.5rem 0;
+    }
+
+    >div {
+        padding: 0.25rem 0.5rem;
+        border-radius: 0.375rem;
+        border-width: 1px;
+        display: flex;
+        flex-shrink: 1;
+        align-items: center;
+        position: relative;
+
+        >input {
+            outline: 2px solid transparent;
+            outline-offset: 2px;
+            font-size: 0.875rem;
+            line-height: 1.25rem;
+            display: flex;
+            width: 100%;
+            padding: 0 5px;
+            background-color: unset;
+            min-width: 220px;
+            min-height: 20px;
+        }
+
+        >input:disabled {
+            background-color: unset;
+        }
+
+        >.eye-button {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            line-height: 1.25rem;
+        }
+    }
+}

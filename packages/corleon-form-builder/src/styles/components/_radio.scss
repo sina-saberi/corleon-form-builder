@@ -1,0 +1,30 @@
+.corleon-field {
+    &.radio {
+        gap: 6px;
+
+        &.horizontal {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+
+        >span {
+            width: 15px;
+            height: 15px;
+            border: 1px solid #ddd;
+            border-radius: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+
+            .checked {
+                background-color: #0ea5e9;
+                width: 10px;
+                height: 10px;
+                border-radius: 100%;
+                box-shadow: 1px 1px 1px 1px #ddd;
+            }
+        }
+    }
+}

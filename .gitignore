@@ -1,0 +1,13 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+examples/example-react/node_modules
+examples/example-next/node_modules
+examples/example-next/package-lock.json
+examples/example-next/.next
+
+packages/corleon-form-builder/coverage
+packages/corleon-form-builder/node_modules
+packages/corleon-form-builder/package-lock.json
+packages/corleon-form-builder/out
+packages/corleon-form-builder/package-lock.json
+packages/corleon-form-builder/scssChunkFile.js

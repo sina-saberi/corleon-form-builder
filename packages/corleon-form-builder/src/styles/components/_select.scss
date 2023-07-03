@@ -1,0 +1,111 @@
+.corleon-field {
+    @keyframes open_down {
+        from {
+            transform: translateY(-100%);
+        }
+
+        to {
+            transform: translateY(0%);
+        }
+    }
+
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    >label {
+        font-weight: 700;
+        font-size: 0.75rem;
+        line-height: 1rem;
+        padding: 0.5rem 0;
+    }
+
+    >div {
+        padding: 0.25rem 0.5rem;
+        border-radius: 0.375rem;
+        border-width: 1px;
+        display: flex;
+        flex-shrink: 1;
+        align-items: center;
+        position: relative;
+
+        >button {
+            outline: 2px solid transparent;
+            outline-offset: 2px;
+            font-size: 0.875rem;
+            line-height: 1.25rem;
+            display: flex;
+            width: 100%;
+            padding: 0 5px;
+            background-color: unset;
+            min-width: 220px;
+            min-height: 20px;
+            align-items: center;
+
+            div {
+                display: flex;
+                width: 100%;
+                gap: 4px;
+                padding: 0 0.25rem;
+                align-items: center;
+                flex-wrap: wrap;
+
+                span {
+                    display: flex;
+                    align-items: center;
+                    gap: 3px;
+                    padding: 0 0.25rem;
+                    border-radius: 0.375rem;
+                    font-size: 0.75rem;
+                    font-weight: bold;
+                    background-color: #0ea5e9;
+                    color: white;
+                    white-space: nowrap;
+                }
+            }
+        }
+
+        >button:disabled {
+            background-color: unset;
+        }
+    }
+}
+
+.options {
+    position: absolute;
+    width: 100%;
+    overflow-y: auto;
+    max-height: 200px;
+    border-radius: 0.375rem;
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+    z-index: 9999999;
+
+    ul {
+        overflow-y: auto;
+        width: 100%;
+        background-color: white;
+
+        li {
+            button {
+                padding: 0.25rem 0.5rem;
+                width: 100%;
+                min-height: 20px;
+                display: flex;
+
+                &:hover {
+                    background-color: #dddddd36;
+                }
+
+                &.selected {
+                    background-color: #dddddd5c;
+                }
+            }
+        }
+    }
+
+    &.down {
+        ul {
+            animation: open_down .20s ease-in-out;
+        }
+    }
+}
