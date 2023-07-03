@@ -52,6 +52,7 @@ in this component you can customize some of the ui but the default module gono r
 <br/>
 <b>src/components/AppFormBuilder.tsx</b>
 ```jsx
+import { FormBuilder } from '@/src/config';
 function AppFormBuilder() {
   <div className="w-full max-h-full overflow-y-auto p-4">
     <div className='flex mb-5'>
@@ -63,6 +64,7 @@ function AppFormBuilder() {
     <FormBuilder />
   </div>
 }
+export default AppFormBuilder;
 ```
 <br/>
 <br/>
@@ -70,9 +72,10 @@ update your layout
 <br/>
 <br/>
 <b>src/layouts/layout.tsx</b>
+
 ```jsx
 import { FormProvider } from '@/src/config';
-import { FormProvider } from '@/src/components/AppFormBuilder'; // add this line
+import AppFormBuilder from '@/src/components/AppFormBuilder'; // add this line
   
 function App() {
   <FormProvider>
@@ -81,3 +84,32 @@ function App() {
 }
 export default App;
 ```
+
+
+now in order for thing to start working the package provided you a hook with every function you need to create , update, remove or even create a new module
+(you can have your own FromBuilder , FormGenerator) but first let see some basics of this tool
+## Create a new Field
+<b>src/components/AppFormBuilder.tsx</b>
+```jsx
+import { FormBuilder } from '@/src/config';
+import { useForm } from 'corleon-form-builder';
+function AppFormBuilder() {
+  const { createNewField , removeAll } = useForm();//add this tow methods
+
+  <div className="w-full max-h-full overflow-y-auto p-4">
+    <div className='flex mb-5'>
+        <div className="flex gap-2">
+           <button onClick={() => createNewField() /*use it at this point*/ }>"create new field"</button>
+           <button onClick={() => removeAll() /*and this*/ }>"remove all fields"</button>
+        </div>
+    </div>
+    <FormBuilder />
+  </div>
+}
+export default AppFormBuilder;
+```
+<br/>
+<p>
+    in this state you shuld be able to create a schema of a form for your own at the ui . the logic is so simple but i will create a video of how to work with        the default module.
+    <br/>
+</p>
