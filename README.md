@@ -53,16 +53,20 @@ in this component you can customize some of the ui but the default module gono r
 <b>src/components/AppFormBuilder.tsx</b>
 ```jsx
 import { FormBuilder } from '@/src/config';
+import React from "react";
 function AppFormBuilder() {
   <div className="w-full max-h-full overflow-y-auto p-4">
-    <div className='flex mb-5'>
-        <div className="flex gap-2">
-           <button onClick={() => { }>"create new field"</button>
-           <button onClick={() => { }} >"remove all fields"</button>
-        </div>
+    <div className="flex mb-5">
+      <div className="flex gap-2">
+        <button onClick={() => {}}>create new field</button>
+        <button onClick={() => {}}>remove all fields</button>
+      </div>
     </div>
     <FormBuilder />
-  </div>
+  </div>;
+}
+export default AppFormBuilder;
+
 }
 export default AppFormBuilder;
 ```
